@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <title>Frontend Mentor | QR code component coding challenge</title>
+        <style>
+            body
+            {
+                background-color: hsl(0, 0%, 94%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0px;
+                height: 100vh;
+                padding: 0px;
+            }
+            .maindiv
+            {
+                max-width: 50%;
+                max-height: 60%;
+                padding: 32px;
+                display: flex;
+                flex-direction: column;
+                background-color: hsl(0, 0%, 100%);
+                border-radius: 15px 15px 150px 15px;
+            }
+            label{
+                font-family: 'Outfit', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+                color:hsl(0, 1%, 44%);
+            }
+            input[type="number"]
+            {
+                border-color:hsl(0, 0%, 86%) ;
+                height: 32px;
+                width: 100px;
+                border-width: 0.1px;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 20px;
+                padding-left:10px ;
+                color:hsl(0, 0%, 8%);
+            }
+            .h2dash
+            {
+                font-weight:bolder;
+                color: hsl(259, 100%, 65%);
+                font-size: 45px;
+                font-family: 'Outfit', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-style: italic;
+            }
+            h2{
+                color: hsl(0, 0%, 8%);
+                font-size: 45px;
+                font-weight:bold;
+                padding-left: 5px;
+                margin: 0px;
+                font-family: 'Outfit', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-style: italic;
+            }
+            button
+            {
+                display: flex;
+                justify-content:flex-end;
+                align-content: flex-end;
+                text-align: center;
+                margin: auto;
+                float: none;
+                width:65px;
+                border-radius: 100%;
+                border: none;
+                background-color:hsl(259, 100%, 65%) ;
+            }
+            p{
+                color:hsla(0, 100%, 67%, 0.772) ;
+                font-size: 12px;
+                font-style: italic;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:ital,wght@1,100&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:ital,wght@1,900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+        <link rel="script" href="./script.js">
+    </head>
+    <body>
+        <div class="maindiv">
+            <div style="display: flex;flex-direction: row;">
+                <label id="headingd">
+                    <div style="padding: 10px; display: flex;flex-direction: column;">
+                    DAY
+                    <br>
+                    <br>
+                    <input id="day" type="number" placeholder="  DD " value="" min="1" max="31" required> 
+                    <p id="dayp"></p>
+                    </div>
+                </label>
+                <label id="headingm">
+                    <div style="padding: 10px; display: flex;flex-direction: column;">
+                    MONTH
+                    <br>
+                    <br>
+                    <input id="mon" type="number" placeholder="  MM " min="1" max="12" value="" required>
+                    <p id="monp"></p>
+                </div> 
+                </label>
+                <label id="headingy">
+                    <div style="padding: 10px; display: flex;flex-direction: column;">
+                    YEAR
+                    <br>
+                    <br>
+                    <input id="year" type="number" placeholder="  YYYY " min="1" value="" required> 
+                    <p id="yearp"></p>
+                </div>
+                </label>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+            <div style="display: inline; height:2px ; background-color:hsl(0, 0%, 86%);"></div>
+             <button onclick="calc()" style="display: inline;" align="right"><img style="align-items: center;justify-content: center; padding: 10px; width: 40%;" src="./images/icon-arrow.svg"></button>
+            </div>
+            <div style=" display: flex;flex-direction: row;">
+                <h2 class="h2dash" id="years">- - </h2>
+                <h2>years</h2>
+            </div>
+            <div style=" display: flex;flex-direction: row;">
+                <h2 class="h2dash" id="months">- - </h2>
+                <h2>months</h2>
+            </div>
+            <div style=" display: flex;flex-direction: row;">
+                <h2 class="h2dash" id="days">- - </h2>
+                <h2>days</h2>
+            </div>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>
